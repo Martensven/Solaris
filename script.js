@@ -80,11 +80,7 @@ fetch(apiKeyUrl, {
                 MinTemp.textContent = `Minimitemperatur: ${data.bodies[2].temp.night}`
                 Moons.textContent = `Antal månar: ${data.bodies[2].moons.length}`
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[2].rotation}`
-                sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[2].orbitalPeriod}`
-
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
+                sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[2].orbitalPeriod}
 
                 planetBox.style.display = 'flex';
             }
@@ -100,15 +96,6 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[3].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[3].orbitalPeriod}`
 
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
-
-
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
-
                 planetBox.style.display = 'flex';
             }
 
@@ -122,10 +109,6 @@ fetch(apiKeyUrl, {
                 Moons.textContent = `Antal månar: ${data.bodies[4].moons.length}`
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[4].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[4].orbitalPeriod}`
-
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
 
                 planetBox.style.display = 'flex';
             }
@@ -141,9 +124,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[5].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[5].orbitalPeriod}`
 
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
+    
 
                 planetBox.style.display = 'flex';
             }
@@ -159,9 +140,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[6].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[6].orbitalPeriod}`
 
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
+               
 
                 planetBox.style.display = 'flex';
             }
@@ -177,9 +156,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[6].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[7].orbitalPeriod}`
 
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
+    
 
                 planetBox.style.display = 'flex';
             }
@@ -195,9 +172,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[8].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[8].orbitalPeriod}`
 
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
-                btnStyle.style.boxShadow = 'none'
-                btnStyle.style.color = 'white'
+    
 
                 planetBox.style.display = 'flex';
             }
