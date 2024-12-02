@@ -6,8 +6,10 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: rgb(8, 0, 44);
+  background: rgb(8, 0, 44);
   color: rgb(255, 255, 255);
+  z-index: -1;
+  font-family: monospace;
 }
 
 header,
@@ -23,7 +25,6 @@ main {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  width: 100%;
   padding: 20px;
   gap: 10px;
   overflow: hidden;
@@ -31,10 +32,12 @@ main {
 main span {
   display: inline-block;
   position: absolute;
-  top: 90%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  overflow: visible;
+  z-index: -1;
 }
 main .sun {
   height: 60px;
@@ -45,8 +48,9 @@ main .sun {
 main .planet {
   background: transparent;
   border: 4px solid rgba(255, 255, 255, 0.5);
-  animation: animate 10s linear infinite;
-  z-index: 9999;
+  animation: animate 60s linear infinite;
+  z-index: -1;
+  border-radius: 50%;
 }
 @keyframes animate {
   0% {
@@ -87,8 +91,10 @@ main .planet7 {
 main .planet8 {
   width: 570px;
   height: 570px;
+  border-radius: 50%;
 }
-main span::before, main span::after {
+main span::before,
+main span::after {
   content: "";
   position: absolute;
   background: #fff;
@@ -177,13 +183,15 @@ main .planetBox {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.404);
   width: 90%;
   margin: 20px auto;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.281);
   color: rgb(43, 0, 65);
-  border: white solid;
+  border: rgba(255, 255, 255, 0.438) solid;
+}
+main .planetBox #name {
+  color: orange;
 }
 main .planetBox .info {
   display: flex;
@@ -191,10 +199,9 @@ main .planetBox .info {
   justify-content: space-between;
   gap: 10px;
   width: 100%;
-  border: white solid;
 }
 main .planetBox .info .planetHead {
-  border: white solid;
+  color: yellow;
 }
 main .planetBox .info #facts,
 main .planetBox .info .numbers {
@@ -203,7 +210,7 @@ main .planetBox .info .numbers {
   border: 1px solid white;
   padding: 10px;
   box-sizing: border-box;
-  border: white solid;
+  background-color: rgba(255, 255, 255, 0.438);
 }
 
 @media (max-width: 768px) {

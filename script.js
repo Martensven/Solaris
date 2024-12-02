@@ -37,9 +37,8 @@ fetch(apiKeyUrl, {
         // 4. Hantera och visa API-data
         console.log('API Data:', data);
 
-
+        //nedan variabler används för att identifiera vilka element som data ska skjutas in i.
         const Name = document.getElementById("name");
-        // const LatinName = document.getElementById("latinName");
         const Facts = document.getElementById("facts");
         const Circumference = document.getElementById("circumference");
         const DistanceToSun = document.getElementById("distanceToSun");
@@ -48,16 +47,15 @@ fetch(apiKeyUrl, {
         const Moons = document.getElementById("moons");
         const ownLaps = document.getElementById("ownLaps");
         const sunLaps = document.getElementById("sunLaps");
-        const btnStyle = document.getElementById('planetBtn');
-        
 
-        
-
+        //startar funktion 
         function searchPlanet() {
 
-            const planetName = document.getElementById('planetName').value.toLowerCase();
-            const planetBox = document.querySelector('.planetBox');
+            const planetName = document.getElementById('planetName').value.toLowerCase(); //skapar variabeln 'planetName' som tar värdet från textfältet.
+            const planetBox = document.querySelector('.planetBox'); //deklarerar varibeln som gör att faktarutan visas
 
+
+            //om planetName stämmer men något av nedan if/else if-metoderna nedan, så kör den rätt kod.
             if (planetName === 'merkurius') {
                 Name.textContent = `${data.bodies[1].name} | ${data.bodies[1].latinName}`;
                 Facts.textContent = data.bodies[1].desc;
@@ -69,13 +67,8 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[1].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[1].orbitalPeriod}`
 
-                btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, gray, lightgray, gray)';
-                btnStyle.style.boxShadow = 'none';
-                btnStyle.style.color = 'white';
-                
+                planetBox.style.display = 'flex'; //faktarutan ligger dold, när denna kod körs så blir den synlig
 
-                planetBox.style.display = 'flex';
-                
             }
 
             else if (planetName === 'venus') {
@@ -111,7 +104,7 @@ fetch(apiKeyUrl, {
                 btnStyle.style.boxShadow = 'none'
                 btnStyle.style.color = 'white'
 
-                
+
                 btnStyle.style.backgroundImage = 'linear-gradient(to bottom right, blue, green, blue)'
                 btnStyle.style.boxShadow = 'none'
                 btnStyle.style.color = 'white'
@@ -223,16 +216,13 @@ fetch(apiKeyUrl, {
                 planetBox.style.display = 'flex';
             }
 
-            else if (planetName === ''){
+            else if (planetName === '') {
                 alert('Du måste skriva in något!');
             }
 
             else {
                 alert('Planeten hittades inte, har du stavat rätt?');
             }
-
-
-
 
         };
 

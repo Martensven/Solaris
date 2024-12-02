@@ -1,112 +1,3 @@
-// body,
-// html {
-//     min-height: 100vh;
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     display: flex;
-//     flex-direction: column;
-//     color: rgb(0, 0, 0);
-//     background-color: rgb(8, 0, 44);
-// }
-
-// header {
-//     color: white;
-//     background-color: rgba(12, 0, 68, 0);
-// }
-
-// footer {
-//     background-color: rgba(9, 0, 105, 0);
-// }
-
-// main {
-//     background-color: rgb(29, 0, 44);
-//     color: rgb(254, 255, 213);
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     flex: 1;
-//     min-height: 100vh;
-//     width: 100%;
-//     border: white;
-
-//     nav {
-//         display: flex;
-//         flex-flow: wrap;
-//         align-items: center;
-//         justify-content: space-around;
-//         width: 40%;
-
-//         #planetName {
-//             width: 25vw;
-//             height: 20px;
-//         }
-
-//         .planets {
-//             background-color: rgb(255, 255, 255);
-//             box-shadow: yellow 0 0 10px;
-//             border-radius: 50%;
-//             color: black;
-//             height: 50px;
-//             width: 50px;
-//             outline: none;
-//             border: none;
-//         }
-
-
-//     }
-
-
-//     .planetBox {
-//         // min-height: 70vh;
-//         background-color: rgba(255, 255, 255, 0.404);
-//         border: solid rgba(255, 255, 255, 0.281);
-//         color: rgb(43, 0, 65);
-//         display: none;
-//         flex-direction: column;
-//         align-items: center;
-//         width: 70vw;    
-//         min-height: 70vh;
-//         flex-shrink: 1;
-
-//         .planetHead {
-//             text-align: center;
-//         }
-
-//         .info {
-//             display: flex;
-//             flex-flow: row-reverse wrap;
-//             width: 70vw;
-//             min-height: 50vh;
-//             align-items: center;
-//             justify-content: space-around;
-//             border: solid white;
-
-//             #facts {
-//                 width: 30vw;
-//                 height: 50vh;
-//                 font-size: larger;
-//                 border: solid white;
-//                 line-height: 30px;
-//                 padding: 5px;
-//                 flex-shrink: 0;
-//             }
-
-//             .numbers {
-//                 width: 30vw;
-//                 height: 50vh;
-//                 font-size: larger;
-//                 border: solid white;
-//                 padding: 5px;
-//                 flex-shrink: 0;
-//             }
-
-//         }
-//     }
-
-// }
-
 // Variabler
 $background-color: rgb(8, 0, 44);
 $text-color: rgb(255, 255, 255);
@@ -123,8 +14,10 @@ html {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background-color: $background-color;
+    background: $background-color;
     color: $text-color;
+    z-index: -1;
+    font-family: monospace;
 }
 
 // Header och Footer
@@ -142,18 +35,21 @@ main {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    width: 100%;
     padding: 20px;
     gap: $nav-gap;
     overflow: hidden;
+    // background-color: #ffffff00;
+
 
     span {
         display: inline-block;
         position: absolute;
-        top: 90%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
+        overflow: visible;
+        z-index: -1;
     }
 
 
@@ -162,24 +58,23 @@ main {
         width: 60px;
         background: yellow;
         box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow;
-        
     }
 
     .planet {
         background: transparent;
         border: 4px solid rgba(255, 255, 255, 0.5);
-        animation: animate 10s linear infinite;
-        z-index: 9999;
-        
+        animation: animate 60s linear infinite;
+        z-index: -1;
+        border-radius: 50%;
     }
 
     @keyframes animate {
-        0%{
-            transform: translate(-50%,-50%) rotate(0);
+        0% {
+            transform: translate(-50%, -50%) rotate(0);
         }
 
-        100%{
-            transform: translate(-50%,-50%) rotate(360deg);
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
         }
     }
 
@@ -192,39 +87,47 @@ main {
         width: 160px;
         height: 160px;
     }
+
     .planet3 {
         width: 220px;
         height: 220px;
     }
+
     .planet4 {
         width: 270px;
         height: 270px;
     }
+
     .planet5 {
         width: 340px;
         height: 340px;
     }
+
     .planet6 {
         width: 430px;
         height: 430px;
     }
+
     .planet7 {
         width: 500px;
         height: 500px;
     }
+
     .planet8 {
         width: 570px;
         height: 570px;
+        border-radius: 50%;
     }
 
-    span::before, span::after{
+    span::before,
+    span::after {
         content: '';
         position: absolute;
         background: #fff;
         border-radius: 50%;
     }
 
-    .planet1::before{
+    .planet1::before {
         width: 20px;
         height: 20px;
         bottom: 6px;
@@ -232,23 +135,23 @@ main {
         background-image: linear-gradient(to right, gray, lightgray, gray);
     }
 
-    .planet2::before{
+    .planet2::before {
         width: 25px;
         height: 25px;
         top: 10px;
         left: 10px;
-        background-image: radial-gradient(rgb(255, 0, 0), rgb(255, 102, 0)) ;
+        background-image: radial-gradient(rgb(255, 0, 0), rgb(255, 102, 0));
     }
 
-    .planet3::before{
+    .planet3::before {
         width: 30px;
         height: 30px;
         top: 100px;
         right: -15px;
-        background-image: radial-gradient(green, blue );
+        background-image: radial-gradient(green, blue);
     }
 
-    .planet4::before{
+    .planet4::before {
         width: 30px;
         height: 30px;
         top: 22px;
@@ -256,7 +159,7 @@ main {
         background: red;
     }
 
-    .planet5::before{
+    .planet5::before {
         width: 40px;
         height: 40px;
         bottom: -18px;
@@ -264,7 +167,7 @@ main {
         background: orange;
     }
 
-    .planet6::before{
+    .planet6::before {
         width: 50px;
         height: 50px;
         top: 100px;
@@ -272,7 +175,7 @@ main {
         background: orange
     }
 
-    .planet6::after{
+    .planet6::after {
         width: 80px;
         height: 20px;
         top: 115px;
@@ -280,7 +183,7 @@ main {
         background: orange;
     }
 
-    .planet7::before{
+    .planet7::before {
         width: 37px;
         height: 37px;
         bottom: 80px;
@@ -288,7 +191,7 @@ main {
         background: blue;
     }
 
-    .planet8::before{
+    .planet8::before {
         width: 41px;
         height: 41px;
         top: 5px;
@@ -296,109 +199,106 @@ main {
         background: magenta;
     }
 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
 
 
-    
 
+        .planets {
+            background-color: orange;
+            color: rgb(0, 0, 0);
+            height: 50px;
+            outline: none;
+            border: none;
+            flex-shrink: 0;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .planetBox {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        // background-color: rgba(255, 255, 255, 0.404);
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+        border: 1px solid $box-border-color;
+        color: rgb(43, 0, 65);
+        border: rgba(255, 255, 255, 0.438) solid;
+
+        #name {
+            color: orange;
+        }
+
+        .info {
+            display: flex;
+            flex-flow: column wrap-reverse;
+            justify-content: space-between;
+            gap: $nav-gap;
+            width: 100%;
+
+
+            .planetHead {
+                color: yellow;
+            }
+
+            #facts,
+            .numbers {
+                flex: 1 1 $min-box-width;
+                min-height: 200px;
+                border: 1px solid white;
+                padding: 10px;
+                box-sizing: border-box;
+
+                background-color: rgba(255, 255, 255, 0.438);
+            }
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+    main {
+
+
+        .planetBox .info {
+            flex-direction: column;
+            align-items: stretch;
+
+            #facts,
+            .numbers {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    main {
 
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 90%;
-            
-
-
-            .planets {
-                background-color: orange;
-                color: rgb(0, 0, 0);
-                height: 50px;
-                outline: none;
-                border: none;
-                flex-shrink: 0;
-                border: none;
-                outline: none;
-            }
-        }
-
-        .planetBox {
-            display: none;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.404);
-            width: 90%;
-            margin: 20px auto;
-            padding: 10px;
-            border: 1px solid $box-border-color;
-            color: rgb(43, 0, 65);
-            border: white solid;
 
-            .info {
-                display: flex;
-
-                flex-flow: column wrap-reverse;
-                justify-content: space-between;
-                gap: $nav-gap;
-                width: 100%;
-                border: white solid;
-
-                .planetHead {
-                    border: white solid;
-                }
-
-                #facts,
-                .numbers {
-                    flex: 1 1 $min-box-width;
-                    min-height: 200px;
-                    border: 1px solid white;
-                    padding: 10px;
-                    box-sizing: border-box;
-                    border: white solid;
-                }
+            .planets {
+                height: 40px;
+                width: 40px;
             }
         }
-    }
 
-    // Media Queries
-    @media (max-width: 768px) {
-        main {
-            
 
-            .planetBox .info {
-                flex-direction: column;
-                align-items: stretch;
+        .planetBox {
+            width: 100%;
+        }
 
-                #facts,
-                .numbers {
-                    width: 100%;
-                }
-            }
+        .info #facts,
+        .info .numbers {
+            font-size: smaller;
         }
     }
-
-    @media (max-width: 500px) {
-        main {
-
-            nav {
-                flex-direction: column;
-                align-items: center;
-
-                .planets {
-                    height: 40px;
-                    width: 40px;
-                }
-            }
-
-        
-            .planetBox {
-                width: 100%;
-            }
-
-            .info #facts,
-            .info .numbers {
-                font-size: smaller;
-            }
-        }
-    }
-
-    
+}
