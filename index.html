@@ -15,23 +15,45 @@
 
         <h2>Solaris</h2>
 
-        <p><input type="text" id="planetName" placeholder="Skriv in en planet i vårt solsystem!"></p>
+        <nav>
+            <input type="text" id="planetName" placeholder="Skriv in en planet i vårt solsystem!">
+            <button class="planets" id="planetBtn">Sök planet</button>
+        </nav>
 
-        <button class="planets" id="planetBtn">Sök planet</button>
+        <section class="planetLine">
+            <span class="sun"></span>
+            <span class="planet planet1"></span>
+            <span class="planet planet2"></span>
+            <span class="planet planet3"></span>
+            <span class="planet planet4"></span>
+            <span class="planet planet5"></span>
+            <span class="planet planet6"></span>
+            <span class="planet planet7"></span>
+            <span class="planet planet8"></span>
+        </section>
 
         <section class="planetBox" id="earth">
-            <h1 id="name">Planetnamn</h1>
-            <h2 id="latinName">Planetnamn på Latin</h2>
-            <article id="facts">Text om planeten</article>
-            <p id="circumference">Planetens omkrets</p>
-            <p id="distanceToSun">KM från solen</p>
-            <p id="maxTemp">10</p>
-            <p id="minTemp">-10</p>
-            <p id="moons"></p>
+            <section class="planetHead">
+                <h1 id="name">Planetnamn</h1>
+                <!-- <h3 id="latinName">Planetnamn på Latin</h3> -->
+            </section>
+            <section class="info">
+                <section id="facts">Text om planeten</section>
+
+                <section class="numbers">
+                    <p id="circumference">Planetens omkrets</p>
+                    <p id="distanceToSun">KM från solen</p>
+                    <p id="maxTemp">10</p>
+                    <p id="minTemp">-10</p>
+                    <p id="moons"></p>
+                    <p id="ownLaps"></p>
+                    <p id="sunLaps"></p>
+                </section>
+            </section>
         </section>
 
     </main>
-    <footer></footer>
+
     <script src="script.js"></script>
 </body>
 
