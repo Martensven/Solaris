@@ -80,7 +80,7 @@ fetch(apiKeyUrl, {
                 MinTemp.textContent = `Minimitemperatur: ${data.bodies[2].temp.night}`
                 Moons.textContent = `Antal månar: ${data.bodies[2].moons.length}`
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[2].rotation}`
-                sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[2].orbitalPeriod}
+                sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[2].orbitalPeriod}`
 
                 planetBox.style.display = 'flex';
             }
