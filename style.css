@@ -27,7 +27,6 @@ main {
   overflow-x: hidden;
   width: 100vw;
   box-sizing: border-box;
-  border: solid white;
 }
 main #solSystemet {
   font-size: 72px;
@@ -177,7 +176,7 @@ main nav {
   box-shadow: white 0 0 5px;
   border-radius: 10px;
   margin-bottom: 10vh;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 main nav #planetName {
   width: 250px;
@@ -225,10 +224,10 @@ main .planetBox .info .numbers {
   background-color: rgba(255, 255, 255, 0.438);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  text-align: left;
 }
 main .planetBox .info #facts {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 50vw;
 }
 main .planetBox .info .numbers {
   width: -moz-fit-content;
