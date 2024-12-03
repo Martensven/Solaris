@@ -53,7 +53,7 @@ fetch(apiKeyUrl, {
 
             const planetName = document.getElementById('planetName').value.toLowerCase(); //skapar variabeln 'planetName' som tar värdet från textfältet.
             const planetBox = document.querySelector('.planetBox'); //deklarerar varibeln som gör att faktarutan visas
-
+            const seachBar = document.querySelector('nav');
 
             //om planetName stämmer men något av nedan if/else if-metoderna nedan, så kör den rätt kod.
             if (planetName === 'merkurius') {
@@ -67,6 +67,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[1].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[1].orbitalPeriod}`
 
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex'; //faktarutan ligger dold, när denna kod körs så blir den synlig
 
             }
@@ -82,6 +83,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[2].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[2].orbitalPeriod}`
 
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -96,6 +98,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[3].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[3].orbitalPeriod}`
 
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -110,6 +113,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[4].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[4].orbitalPeriod}`
 
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -125,7 +129,7 @@ fetch(apiKeyUrl, {
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[5].orbitalPeriod}`
 
     
-
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -141,7 +145,7 @@ fetch(apiKeyUrl, {
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[6].orbitalPeriod}`
 
                
-
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -157,7 +161,7 @@ fetch(apiKeyUrl, {
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[7].orbitalPeriod}`
 
     
-
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -173,7 +177,7 @@ fetch(apiKeyUrl, {
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[8].orbitalPeriod}`
 
     
-
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -188,6 +192,7 @@ fetch(apiKeyUrl, {
                 ownLaps.textContent = `Antal jorddygn att rotera runt sin egen axel: ${data.bodies[0].rotation}`
                 sunLaps.textContent = `Antal jorddygn att rotera runt solen: ${data.bodies[0].orbitalPeriod}`
 
+                seachBar.style.display = 'none';
                 planetBox.style.display = 'flex';
             }
 
@@ -201,8 +206,19 @@ fetch(apiKeyUrl, {
 
         };
 
-        const planetBtn = document.getElementById("planetBtn");
-        planetBtn.addEventListener("click", searchPlanet);
+        function closeInfo () {
+            const planetBox = document.querySelector('.planetBox');
+            const seachBar = document.querySelector('nav');
+            planetBox.style.display = 'none'
+            seachBar.style.display = 'flex';
+        }
+
+        const planetBtn = document.getElementById('planetBtn');
+        const closeBtn = document.getElementById('closeBtn');
+
+        planetBtn.addEventListener('click', searchPlanet);
+        closeBtn.addEventListener('click', closeInfo);
+
 
     })
     .catch(error => {
