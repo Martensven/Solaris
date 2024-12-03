@@ -24,7 +24,7 @@ html {
 
 // Main Content
 main {
-    // position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@ main {
     overflow-x: hidden;
     width: 100vw;
     box-sizing: border-box;
-
+    border: solid white;
     #solSystemet {
         font-size: 72px;
     }
@@ -68,7 +68,7 @@ main {
         border: 4px solid rgba(255, 255, 255, 0.5);
         animation: animate 120s linear infinite;
         z-index: -1;
-        border-radius: 50%;
+        border-radius: 50%; 
     }
 
     @keyframes animate {
@@ -119,7 +119,6 @@ main {
     .planet8 {
         width: 570px;
         height: 570px;
-        border-radius: 50%;
     }
 
     span::before,

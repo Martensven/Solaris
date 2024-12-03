@@ -17,6 +17,7 @@ html {
 }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +27,7 @@ main {
   overflow-x: hidden;
   width: 100vw;
   box-sizing: border-box;
+  border: solid white;
 }
 main #solSystemet {
   font-size: 72px;
@@ -96,7 +98,6 @@ main .planet7 {
 main .planet8 {
   width: 570px;
   height: 570px;
-  border-radius: 50%;
 }
 main span::before,
 main span::after {
