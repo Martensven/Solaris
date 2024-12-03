@@ -176,6 +176,7 @@ main nav {
   box-shadow: white 0 0 5px;
   border-radius: 10px;
   margin-bottom: 10vh;
+  margin-top: 10vh;
 }
 main nav #planetName {
   width: 250px;
