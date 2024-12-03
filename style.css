@@ -10,7 +10,7 @@ html {
   align-items: center;
   justify-content: center;
   background: rgb(7, 0, 36);
-  color: rgb(255, 255, 255);
+  color: white;
   z-index: -1;
   font-family: monospace;
   overflow-x: hidden;
@@ -56,7 +56,7 @@ main .sun {
 }
 main .planet {
   background: transparent;
-  border: 4px solid rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.5);
   animation: animate 120s linear infinite;
   z-index: -1;
   border-radius: 50%;
@@ -170,13 +170,12 @@ main .planet8::before {
   top: 5px;
   right: 140px;
   background: magenta;
-  overflow-x: hidden;
 }
 main nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: white 0 0 5px;
+  box-shadow: rgb(0, 0, 0) 0 0 5px;
   border-radius: 10px;
   margin-bottom: 10vh;
   margin-top: 5vh;
@@ -188,6 +187,7 @@ main nav #planetName {
   outline: none;
   border: none;
   border-radius: 10px 0 0 10px;
+  text-align: center;
 }
 main nav .planets {
   background-color: rgb(0, 0, 0);
@@ -227,18 +227,17 @@ main .planetBox .info {
 main .planetBox .info #facts,
 main .planetBox .info .numbers {
   min-height: 20vh;
+  width: 50vw;
+  min-width: 350px;
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.438);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   text-align: left;
-  width: 50vw;
-  min-width: 350px;
 }
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   main main #solSystemet {
     font-size: 32px;
   }
