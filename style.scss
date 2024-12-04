@@ -1,6 +1,5 @@
 // Variabler
 $background-color: rgb(7, 0, 36);
-$text-color: rgb(255, 255, 255);
 
 // Globala inställningar
 body,
@@ -61,6 +60,7 @@ main {
         overflow: visible;
         z-index: -1;
     }
+
     //solen
     .sun {
         height: 60px;
@@ -68,11 +68,11 @@ main {
         background: yellow;
         box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow;
     }
+
     //Gemensam klass för alla planeter
     .planet {
         background: transparent;
         border: 3px solid rgba(255, 255, 255, 0.5);
-        animation: animate 120s linear infinite;
         z-index: -1;
         border-radius: 50%;
     }
@@ -88,53 +88,61 @@ main {
         }
     }
 
-    //Sätter storleken på "omloppsbanan" för varje planet
+    //Sätter storleken på "omloppsbanan" för varje planet, 1-8 samt hur lång tid det tar för animationen att utföras för respektive planet.
     .planet1 {
         width: 110px;
         height: 110px;
+        animation: animate 8.8s linear infinite;
     }
 
     .planet2 {
         width: 160px;
         height: 160px;
+        animation: animate 22.5s linear infinite;
     }
 
     .planet3 {
         width: 220px;
         height: 220px;
+        animation: animate 36.5s linear infinite;
     }
 
     .planet4 {
         width: 270px;
         height: 270px;
+        animation: animate 68.7s linear infinite;
     }
 
     .planet5 {
         width: 340px;
         height: 340px;
+        animation: animate 100s linear infinite;
     }
 
     .planet6 {
         width: 430px;
         height: 430px;
+        animation: animate 120s linear infinite;
     }
 
     .planet7 {
         width: 500px;
         height: 500px;
+        animation: animate 150s linear infinite;
     }
 
     .planet8 {
         width: 570px;
         height: 570px;
+        animation: animate 200s linear infinite;
     }
 
-    
+
     span::before,
     span::after {
         content: '';
         position: absolute;
-        background: #fff;
+        background: #ff0000;
         border-radius: 50%;
     }
 
@@ -144,7 +152,8 @@ main {
         height: 20px;
         bottom: 6px;
         left: 2px;
-        background-image: linear-gradient(to right, gray, lightgray, gray);
+        background-image: radial-gradient(lightgray, gray);
+        box-shadow: inset 0px 0px 3px black;
     }
 
     .planet2::before {
@@ -152,7 +161,8 @@ main {
         height: 25px;
         top: 10px;
         left: 10px;
-        background-image: radial-gradient(rgb(255, 0, 0), rgb(255, 102, 0));
+        background-image: radial-gradient(rgb(255, 251, 0), rgb(255, 0, 0));
+        box-shadow: inset 0px 0px 3px black;
     }
 
     .planet3::before {
@@ -160,7 +170,8 @@ main {
         height: 30px;
         top: 100px;
         right: -15px;
-        background-image: radial-gradient(green, blue);
+        box-shadow: inset 0px 0px 3px black;
+        background: radial-gradient(green, blue);
     }
 
     .planet4::before {
@@ -168,7 +179,8 @@ main {
         height: 30px;
         top: 22px;
         left: 210px;
-        background: red;
+        background: radial-gradient(orangered, rgb(141, 141, 141));
+        box-shadow: inset 0px 0px 3px black;
     }
 
     .planet5::before {
@@ -176,7 +188,8 @@ main {
         height: 40px;
         bottom: -18px;
         left: 170px;
-        background: orange;
+        background: linear-gradient(to bottom, beige, orange, beige, orange, beige);
+        box-shadow: inset 0px 0px 3px black;
     }
 
     .planet6::before {
@@ -184,15 +197,18 @@ main {
         height: 50px;
         top: 100px;
         left: -7px;
-        background: orange
+        background: linear-gradient(to bottom, orange, beige, orange, beige, orange, beige, orange, beige, orange, beige, orange, beige, );
+        box-shadow: inset 0px 0px 3px black;
     }
+
     //För att få dit ringen runt Saturnus
     .planet6::after {
         width: 80px;
-        height: 20px;
-        top: 115px;
+        height: 7px;
+        top: 121px;
         left: -21px;
-        background: orange;
+        background: linear-gradient(to bottom, orange, beige);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     }
 
     .planet7::before {
@@ -200,7 +216,8 @@ main {
         height: 37px;
         bottom: 80px;
         right: 30px;
-        background: blue;
+        background: radial-gradient(#afdbf5, #93cdf1, #62aee7, #4296dc, #2e84ce);
+        box-shadow: inset 0px 0px 3px black;
     }
 
     .planet8::before {
@@ -208,8 +225,8 @@ main {
         height: 41px;
         top: 5px;
         right: 140px;
-        background: magenta;
-        
+        background: radial-gradient(#3f54ba, #3f54ba, #274687);
+        box-shadow: inset 0px 0px 3px black;
     }
 
 
@@ -258,14 +275,12 @@ main {
         color: rgb(43, 0, 65);
         font-size: x-large;
 
-    
-
-    #closeBtn {
-        outline: none;
-        background-color: #ffffff00;
-        border: none;
-        color: $text-color;
-    }
+        #closeBtn {
+            outline: none;
+            background-color: #ffffff00;
+            border: none;
+            color: white;
+        }
 
         #name {
             color: orange;
@@ -279,7 +294,7 @@ main {
             #facts,
             .numbers {
                 min-height: 20vh;
-                width: 50vw;
+                width: 90vw;
                 min-width: 350px;
                 padding: 10px;
                 margin-top: 5px;
@@ -288,63 +303,56 @@ main {
                 backdrop-filter: blur(10px);
                 text-align: left;
             }
-
-            
-    }
-}
-
-// Media Queries
-@media (max-width: 780px) {
-    main {
-
-        #solSystemet {
-            font-size: 32px;
-        }
-
-        #solaris {
-            font-size: 20px;
-            margin: 0;
-        }
-
-        .planetBox .info {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-
-            #facts,
-            .numbers {
-                width: 100vw
-            }
-        }
-
-
-    }
-}
-
-@media (max-width: 500px) {
-    main {
-        nav {
-
-            #planetName {
-                width: 200px;
-                height: 48px;
-
-            }
-
-            .planets {
-                width: 75px;
-            }
-        }
-
-
-        .planetBox {
-            width: 100%;
-        }
-
-        .info #facts,
-        .info .numbers {
-            font-size: smaller;
         }
     }
-}
+
+    // Media Queries
+    @media (max-width: 780px) {
+        main {
+
+            #solSystemet {
+                font-size: 32px;
+            }
+
+            #solaris {
+                font-size: 20px;
+                margin: 0;
+            }
+
+            .planetBox .info {
+                flex-direction: column;
+                align-items: center;
+                width: 100vw;
+
+                #facts,
+                .numbers {
+                    width: 100vw
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        main {
+            nav {
+                #planetName {
+                    width: 200px;
+                    height: 48px;
+                }
+
+                .planets {
+                    width: 75px;
+                }
+            }
+
+            .planetBox {
+                width: 100%;
+            }
+
+            .info #facts,
+            .info .numbers {
+                font-size: smaller;
+            }
+        }
+    }
 }

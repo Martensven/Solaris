@@ -57,7 +57,6 @@ main .sun {
 main .planet {
   background: transparent;
   border: 3px solid rgba(255, 255, 255, 0.5);
-  animation: animate 120s linear infinite;
   z-index: -1;
   border-radius: 50%;
 }
@@ -72,40 +71,48 @@ main .planet {
 main .planet1 {
   width: 110px;
   height: 110px;
+  animation: animate 8.8s linear infinite;
 }
 main .planet2 {
   width: 160px;
   height: 160px;
+  animation: animate 22.5s linear infinite;
 }
 main .planet3 {
   width: 220px;
   height: 220px;
+  animation: animate 36.5s linear infinite;
 }
 main .planet4 {
   width: 270px;
   height: 270px;
+  animation: animate 68.7s linear infinite;
 }
 main .planet5 {
   width: 340px;
   height: 340px;
+  animation: animate 100s linear infinite;
 }
 main .planet6 {
   width: 430px;
   height: 430px;
+  animation: animate 120s linear infinite;
 }
 main .planet7 {
   width: 500px;
   height: 500px;
+  animation: animate 150s linear infinite;
 }
 main .planet8 {
   width: 570px;
   height: 570px;
+  animation: animate 200s linear infinite;
 }
 main span::before,
 main span::after {
   content: "";
   position: absolute;
-  background: #fff;
+  background: #ff0000;
   border-radius: 50%;
 }
 main .planet1::before {
@@ -113,63 +120,72 @@ main .planet1::before {
   height: 20px;
   bottom: 6px;
   left: 2px;
-  background-image: linear-gradient(to right, gray, lightgray, gray);
+  background-image: radial-gradient(lightgray, gray);
+  box-shadow: inset 0px 0px 3px black;
 }
 main .planet2::before {
   width: 25px;
   height: 25px;
   top: 10px;
   left: 10px;
-  background-image: radial-gradient(rgb(255, 0, 0), rgb(255, 102, 0));
+  background-image: radial-gradient(rgb(255, 251, 0), rgb(255, 0, 0));
+  box-shadow: inset 0px 0px 3px black;
 }
 main .planet3::before {
   width: 30px;
   height: 30px;
   top: 100px;
   right: -15px;
-  background-image: radial-gradient(green, blue);
+  box-shadow: inset 0px 0px 3px black;
+  background: radial-gradient(green, blue);
 }
 main .planet4::before {
   width: 30px;
   height: 30px;
   top: 22px;
   left: 210px;
-  background: red;
+  background: radial-gradient(orangered, rgb(141, 141, 141));
+  box-shadow: inset 0px 0px 3px black;
 }
 main .planet5::before {
   width: 40px;
   height: 40px;
   bottom: -18px;
   left: 170px;
-  background: orange;
+  background: linear-gradient(to bottom, beige, orange, beige, orange, beige);
+  box-shadow: inset 0px 0px 3px black;
 }
 main .planet6::before {
   width: 50px;
   height: 50px;
   top: 100px;
   left: -7px;
-  background: orange;
+  background: linear-gradient(to bottom, orange, beige, orange, beige, orange, beige, orange, beige, orange, beige, orange, beige);
+  box-shadow: inset 0px 0px 3px black;
 }
 main .planet6::after {
   width: 80px;
-  height: 20px;
-  top: 115px;
+  height: 7px;
+  top: 121px;
   left: -21px;
-  background: orange;
+  background: linear-gradient(to bottom, orange, beige);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 main .planet7::before {
   width: 37px;
   height: 37px;
   bottom: 80px;
   right: 30px;
-  background: blue;
+  background: radial-gradient(#afdbf5, #93cdf1, #62aee7, #4296dc, #2e84ce);
+  box-shadow: inset 0px 0px 3px black;
 }
 main .planet8::before {
   width: 41px;
   height: 41px;
   top: 5px;
   right: 140px;
-  background: magenta;
+  background: radial-gradient(#3f54ba, #3f54ba, #274687);
+  box-shadow: inset 0px 0px 3px black;
 }
 main nav {
   display: flex;
@@ -214,7 +230,7 @@ main .planetBox #closeBtn {
   outline: none;
   background-color: rgba(255, 255, 255, 0);
   border: none;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 main .planetBox #name {
   color: orange;
@@ -227,7 +243,7 @@ main .planetBox .info {
 main .planetBox .info #facts,
 main .planetBox .info .numbers {
   min-height: 20vh;
-  width: 50vw;
+  width: 90vw;
   min-width: 350px;
   padding: 10px;
   margin-top: 5px;
@@ -248,7 +264,7 @@ main .planetBox .info .numbers {
   main main .planetBox .info {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
   }
   main main .planetBox .info #facts,
   main main .planetBox .info .numbers {
