@@ -137,12 +137,11 @@ main {
         animation: animate 200s linear infinite;
     }
 
-
+    //Alla element med "Before" och "After" får nedan styling
     span::before,
     span::after {
         content: '';
         position: absolute;
-        background: #ff0000;
         border-radius: 50%;
     }
 
@@ -240,6 +239,7 @@ main {
         margin-bottom: 10vh;
         margin-top: 5vh;
 
+        //Sökruta
         #planetName {
             width: 250px;
             height: 48px;
@@ -250,7 +250,7 @@ main {
             text-align: center;
         }
 
-
+        //Knapp som aktiverar sökrutan
         .planets {
             background-color: rgb(0, 0, 0);
             color: rgb(255, 255, 255);
@@ -277,7 +277,7 @@ main {
         background-color: rgba(255, 255, 255, 0.158);
         text-shadow: 0px 0px 3px black;
         
-
+        //Knapp för att kunna dölja planetBox
         #closeBtn {
             outline: none;
             background-color: #ffffff00;
@@ -285,12 +285,12 @@ main {
             color: rgb(255, 255, 255);
             padding: 10px;
         }
-
+        //Planetnamn som söks fram
         #name {
             color: orange;
             text-shadow: 0px 0px 3px black;
         }
-
+        //Resten av datan som kommer in från API.
         .info {
             display: flex;
             flex-direction: column;

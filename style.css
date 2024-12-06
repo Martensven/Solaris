@@ -112,7 +112,6 @@ main span::before,
 main span::after {
   content: "";
   position: absolute;
-  background: #ff0000;
   border-radius: 50%;
 }
 main .planet1::before {

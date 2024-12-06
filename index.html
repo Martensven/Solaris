@@ -9,23 +9,25 @@
 </head>
 
 <body>
-
+    <!-- Main-section som innehåller allt -->
     <main>
-        <header>
+        <!-- Bara en header -->
+        <header> 
             <h1 id="solSystemet">Vårt solsystem</h1>
             <h2 id="solaris">Solaris</h2>
         </header>
 
-
+    <!-- Nedan sektion innerhåller den data vi hämtar från API. Även fler sektioner inuti för stylingsyfte -->
         <section class="planetBox">
             <section class="planetHead">
                 <h1 id="name">Planetnamn</h1>
             </section>
+            
             <section class="info" id="info">
                 <section id="facts">Text om planeten</section>
-
+                
                 <section class="numbers">
-                    <p id="circumference">Planetens omkrets</p>
+                    <p id="circumference"></p>
                     <p id="distanceToSun">KM från solen</p>
                     <p id="maxTemp">10</p>
                     <p id="minTemp">-10</p>
@@ -36,13 +38,13 @@
             </section>
             <button id="closeBtn">Stäng</button>
         </section>
-
+        <!-- Nedan nav innehåller textfält och knapp för att kunna söka på planeter -->
         <nav>
             <input type="text" id="planetName" placeholder="Skriv in en planet" required>
             <button class="planets" id="planetBtn">Sök planet</button>
         </nav>
-
-        <section class="planetLine">
+        <!-- Nedan sektion innehåller samtliga planeter (och solen) som snurrar i bakgrunden -->
+        <section>
             <span class="sun"></span>
             <span class="planet planet1"></span>
             <span class="planet planet2"></span>
