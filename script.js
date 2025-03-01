@@ -1,6 +1,6 @@
 //Vi deklarerar API-länkarna som variabler för att koden ska se mindre kladdig ut längre ner i koden när vi använder länkarna.
-const apiUrl = 'https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies'; 
-const apiKeyUrl = 'https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys';
+const apiUrl = 'https://i4kif2xfk7.execute-api.eu-north-1.amazonaws.com/bodies'; 
+const apiKeyUrl = 'https://i4kif2xfk7.execute-api.eu-north-1.amazonaws.com/keys';
 
 
 //använd fetch för att hämta data fån APIet 
